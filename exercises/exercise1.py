@@ -1,6 +1,7 @@
 """Variables de Instancia y Métodos de instancia."""
 
 from math import pi
+from xml.etree.ElementTree import PI
 
 
 class Circle:
@@ -19,9 +20,20 @@ class Circle:
     """
 
 
+def __init__(self, radio):
+    self.radio = radio
+
+def area(self):
+    return round(PI * self.radio**2, 2)  
+
+def perimetro(self):
+    return round(2 * PI * self.radio, 2)
+
+
+
 # NO MODIFICAR - INICIO
 # Test básico
-circle = Circle(1)
+circle = Circle(radio=1)
 assert circle.radio == 1
 assert circle.area() == 3.14
 assert circle.perimetro() == 6.28
