@@ -46,7 +46,7 @@ assert circle.perimetro() == 6.28
 
 # Test parámetro obligatorio
 try:
-    circle = Circle()
+    circle = Circle(perimetro=6.28)
     assert False, "No se puede instanciar sin radio"
 except TypeError:
     assert True
