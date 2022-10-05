@@ -22,6 +22,19 @@ Restricciones:
     - No utilizar properties
     - Utilizar Type Hints en todos los métodos y variables
 """
+@dataclass
+class Carrera:
+    nombre: str
+    
+class Materia(Carrera):
+    def __init__(self, nombre):
+        self.nombres=nombre
+
+    def __str__(self) -> str:
+        return f"escriba una materia: {self.nombres}"
+
+
+
 
 
 # NO MODIFICAR - INICIO
