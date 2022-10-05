@@ -44,13 +44,13 @@ class Contribuyente(ABC):
     
 
 class Empleado(Contribuyente):
-    def calcular_sueldos(contribuyentes: List[Contribuyente]):
+    def calcular_sueldo(contribuyentes: List[Contribuyente]):
         """Data una lista de contribuyentes, devuelve una lista de los sueldos de
         cada uno."""
     ABC._impuestos = ABC._sueldo * 0.17
 
 class Monotributista(Contribuyente):
-    def calcular_sueldos(contribuyentes: List[Contribuyente]):
+    def calcular_sueldo(contribuyentes: List[Contribuyente]):
         """Data una lista de contribuyentes, devuelve una lista de los sueldos de
         cada uno."""
     if (ABC.sueldo <= 370.000):
