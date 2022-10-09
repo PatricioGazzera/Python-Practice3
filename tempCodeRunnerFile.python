@@ -1,34 +1,10 @@
-class Cuenta():
+from functools import reduce
 
-    def __init__(self,titular,cantidad=0):
-        self.titular=titular
-        self.__cantidad=cantidad
-    
-    @property
-    def titular(self):
-        return self.__titular
-    
-    @property
-    def cantidad(self):
-        return self.__cantidad
 
-    @titular.setter
-    def titular(self,titular):
-        self.__titular=titular
-
-       
-    def mostrar(self):
-        return "Cuenta\n"+"Titular:"+self.titular.mostrar()+" - Cantidad:"+str(self.cantidad)
-    
-    def ingresar(self,cantidad):
-        if cantidad > 0:
-            self.__cantidad = self.__cantidad + cantidad
-    
-    def retirar(self,cantidad):
-        if cantidad > 0:
-            self.__cantidad = self.__cantidad - cantidad
-
-p1 = ("pepe", 22)
-p1.mostrar()
-p1.ingresar()
-p1.ratirar()
+lista = [1, 2, 3, 4, 5, 6]
+cuadrados = map(lambda x: x ** 2, lista)
+cuadrados_pares = filter(lambda x: x > 5, cuadrados)  	
+suma_pares = reduce(lambda x, y: x + y, cuadrados_pares)
+print(cuadrados)
+print(cuadrados_pares)
+print(suma_pares)
